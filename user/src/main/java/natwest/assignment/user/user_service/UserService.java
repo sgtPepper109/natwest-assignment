@@ -42,7 +42,7 @@ public class UserService {
     }
 
     public String play(String moveByUser) {
-        String moveByComputer = this.restTemplate.getForObject("http://localhost:9002/computer/getMoveByComputer", String.class);
+        String moveByComputer = this.restTemplate.getForObject("http://computer-service/computer/getMoveByComputer", String.class);
         log.info("INFO: moveByUser: {}", moveByUser);
         log.info("INFO: moveByComputer: {}", moveByComputer);
 
